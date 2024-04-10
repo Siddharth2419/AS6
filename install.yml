@@ -1,0 +1,8 @@
+# playbook.yml
+---
+
+- hosts: installer
+  become: true
+  roles:
+    - role: tomcat
+

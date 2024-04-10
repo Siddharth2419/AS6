@@ -1,0 +1,9 @@
+---
+# defaults file for tomcat
+#
+# defaults/main.yml
+
+# defaults/main.yml
+tomcat_version: "9.0.54"
+tomcat_install_dir: "/opt/tomcat/9"
+

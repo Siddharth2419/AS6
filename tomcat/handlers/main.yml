@@ -1,0 +1,10 @@
+---
+# handlers file for tomcat
+#
+# handlers/main.yml
+- name: Restart Tomcat
+  ansible.builtin.service:
+    name: tomcat
+    state: restarted
+  notify: Restart Tomcat
+

@@ -1,0 +1,6 @@
+---
+# vars file for tomcat
+#
+tomcat_package: "tomcat{{ tomcat_version }}"
+tomcat_version_major: 9  # Assuming the Tomcat version you are using is 9
+

@@ -1,0 +1,31 @@
+---
+# tasks/main.yml
+- name: Install dependencies
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - openjdk-11-jdk  # Adjust as per your Java version requirement
+    - unzip           # Or whatever package manager is appropriate for your OS
+
+- name: Download and extract Tomcat
+  get_url:
+    # url: "https://tomcat.apache.org/download-90.cgi/dist/tomcat/tomcat-{{ tomcat_version_major }}/v{{ tomcat_version }}/bin/apache-tomcat-{{ tomcat_version }}.tar.gz"
+    url: "https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.tar.gz"
+    dest: "/tmp/apache-tomcat-{{ tomcat_version }}.tar.gz"
+
+- name: Extract Tomcat archive
+  ansible.builtin.unarchive:
+    src: "/tmp/apache-tomcat-{{ tomcat_version }}.tar.gz"
+    dest: "{{ tomcat_install_dir }}"
+    remote_src: yes
+
+- name: Ensure tomcat user owns the installation directory
+  file:
+    path: "{{ tomcat_install_dir }}"
+    owner: tomcat
+    group: tomcat
+    state: directory
+    recurse: yes
+  become: yes
+
