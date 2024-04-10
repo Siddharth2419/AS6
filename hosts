@@ -1,1 +1,1 @@
-installer ansible_host=54.235.37.133 ansible_user=ubuntu ansible_ssh_private_key_file=/home/siddharth/ansible_As5/ansible2.pem
+installer ansible_host=54.176.225.165 ansible_user=ubuntu ansible_ssh_private_key_file=/home/siddharth/Downloads/deploy.pem
