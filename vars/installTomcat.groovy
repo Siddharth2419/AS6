@@ -14,4 +14,9 @@ def call() {
         body: 'The Ansible deployment has completed.',
         to: 'siddhu41999@gmail.com'
     )
+    // Slack Notification
+    slackSend (
+        channel: '#jenkinsnotification',
+        message: 'Ansible deployment has completed successfully.'
+    )
 }
