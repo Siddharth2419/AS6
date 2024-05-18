@@ -1,1 +1,1 @@
-installer ansible_host=3.80.118.23 ansible_user=ubuntu ansible_ssh_private_key_file=/home/siddharth/Downloads/tomcat.pem
+installer ansible_host=54.163.33.20 ansible_user=ubuntu ansible_ssh_private_key_file=/home/siddharth/Downloads/test.pem
