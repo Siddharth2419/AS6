@@ -1,7 +1,8 @@
 ---
 # tasks/main.yml
 - name: Install dependencies
-  package:
+  apt:
+    update_cache: yes
     name: "{{ item }}"
     state: present
   loop:
