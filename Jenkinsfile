@@ -10,8 +10,8 @@ pipeline {
                 script {
                     ansiblePlaybook(
                         playbook: 'install.yml',
-                        inventory: 'aws_ec2.yaml',
-                        credentialsId: 'new.pem'
+                        inventory: 'aws_ec2.yaml'
+                        
                     )
                 }
             }
