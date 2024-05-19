@@ -5,7 +5,7 @@ def call() {
     input message: 'Approve the deployment?', submitter: 'admin,siddharth pawar'
     // Playbook Execution
     ansiblePlaybook(
-        inventory: 'hosts',
+        inventory: 'aws_ec2.yaml',
         playbook: 'install.yml'
     )
     // Notification
