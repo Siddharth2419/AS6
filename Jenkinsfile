@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     ansiblePlaybook(
-                        playbook: 'install.yaml',
+                        playbook: 'install.yml',
                         inventory: 'aws_ec2.yaml',
                         credentialsId: 'new.pem'
                     )
