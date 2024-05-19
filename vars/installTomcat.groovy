@@ -7,7 +7,7 @@ def call() {
     ansiblePlaybook(
         inventory: 'aws_ec2.yaml',
         playbook: 'install.yml',
-        credentialsID: 'tool.pem'
+        credentialsID: 'main.pem'
     )
     // Notification
     emailext(
