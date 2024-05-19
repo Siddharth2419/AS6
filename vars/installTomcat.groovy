@@ -10,13 +10,13 @@ def call() {
     )
     // Notification
     emailext(
-        subject: 'Ansible Deployment Status',
-        body: 'The Ansible deployment has completed.',
+        subject: 'Tomcat Deployment Status',
+        body: 'The Tomcat deployment has completed.',
         to: 'siddhu41999@gmail.com'
     )
     // Slack Notification
     slackSend (
         channel: '#jenkinsnotification',
-        message: 'Ansible deployment has completed successfully.'
+        message: 'Tomcat deployment has completed successfully.'
     )
 }
