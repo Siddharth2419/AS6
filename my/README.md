@@ -1,37 +1,35 @@
-#  Packer AWS AMI
+# Packer AWS AMI
 
 ## Installation
-Install from 
-[install](https://developer.hashicorp.com/packer/install)
-'''
-* unzip packer_1.11.1_linux_amd64.zip 
-* Archive:  packer_1.11.1_linux_amd64.zip
- * inflating: LICENSE.txt             
- *  inflating: packer                  
-* siddharth@siddharth-Inspiron-5520:~/Downloads$ sudo mv packer /usr/local/bin/
-* siddharth@siddharth-Inspiron-5520:~/Downloads$ cd
-* siddharth@siddharth-Inspiron-5520:~$ packer version 
+Install from [install](https://developer.hashicorp.com/packer/install)
 
 
-'''
+
+
 [awsplugin](https://developer.hashicorp.com/packer/integrations/hashicorp/amazon)
+
 ## Steps
-* aws configure
-* add credentials
-* create new dir add json contains AMI [get refrence](https://github.com/Siddharth2419/AS6/blob/main/packer-template.json)
-  '''
-  packer validate .json
-  packer build .json
-  '''
-  ## You can use builder from official sites
+1. aws configure
+2. Add credentials
+3. Create new directory and add JSON file containing AMI configuration [get reference](https://github.com/Siddharth2419/AS6/blob/main/packer-template.json)
+
+    ```sh
+    packer validate .json
+    packer build .json
+    ```
+
+You can use builder from official sites.
+
 ## With Jenkins
-* Add aws cred plugin
-* Add credentials [access-secret-key]
-* In git-repo .json file must be present with content
-* mention details in .json file
-* here is the pipeline
-  '''
-  node {
+1. Add AWS credentials plugin
+2. Add credentials [access-secret-key]
+3. In git-repo, `.json` file must be present with content
+4. Mention details in `.json` file
+
+Here is the pipeline:
+
+```groovy
+node {
     def gitRepo = 'https://github.com/Siddharth2419/AS6.git' // Replace with your repo URL
     def branch = 'main'
     def packerTemplate = 'packer-template.json' // Replace with your Packer template file
@@ -97,4 +95,3 @@ def cleanupWorkspace() {
         deleteDir()
     }
 }
-  '''
