@@ -18,7 +18,7 @@ Install from
 ## Steps
 * aws configure
 * add credentials
-* create new dir add json contains AMI []
+* create new dir add json contains AMI [get refrence](https://github.com/Siddharth2419/AS6/blob/main/packer-template.json)
   '''
   packer validate .json
   packer build .json
