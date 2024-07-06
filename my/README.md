@@ -17,8 +17,8 @@ Install from [install](https://developer.hashicorp.com/packer/install)
     packer validate .json
     packer build .json
     ```
-
-You can use builder from official sites.
+* for check aws cred  [credstore](https://www.howtoforge.com/how-to-store-aws-user-access-key-and-secret-key-in-jenkins/#:~:text=Store%20AWS%20Access%20and%20Secret%20keys%20in%20Jenkins%20Credentials,-We%20are%20now&text=Go%20back%20to%20the%20main,%2D%2D%3E%20%22Add%20credentials%22.)
+* You can use builder from official sites.
 
 ## With Jenkins
 1. Add AWS credentials plugin
